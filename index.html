@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assisted Programming - University Lecture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Navigation Header -->
+        <header class="presentation-header">
+            <div class="slide-counter">
+                <span id="current-slide">1</span> of 15
+                <span id="bullet-counter" class="bullet-counter hidden">Point <span id="current-bullet">1</span> of <span id="total-bullets">0</span></span>
+            </div>
+            <div class="navigation-controls">
+                <button id="prev-btn" class="btn btn--outline btn--sm">Previous</button>
+                <button id="next-btn" class="btn btn--primary btn--sm">Next</button>
+            </div>
+        </header>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay hidden">
+            <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-container">
+            <!-- Slide 1: Title Slide -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content title-slide">
+                    <h1 class="animate-element" data-delay="0">AI Assisted Programming</h1>
+                    <h2 class="animate-element" data-delay="500">Course Module Introduction for 4th Year Computer Science</h2>
+                    <div class="lecture-info">
+                        <p class="animate-element bullet-point" data-delay="1000"><strong>Lecturer:</strong> Daniel</p>
+                        <p class="animate-element bullet-point" data-delay="1200"><strong>University:</strong> ATU (Atlantic Technological University)</p>
+                        <p class="animate-element bullet-point" data-delay="1400"><strong>Date:</strong> September 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: What is AI Assisted Programming? -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">What is AI Assisted Programming?</h2>
+                    <div class="definition-box animate-element" data-delay="200">
+                        <p class="definition">"The use of artificial intelligence technologies to support, automate, or enhance software development tasks such as code generation, code completion, testing, debugging, and documentation."</p>
+                    </div>
+                    <h3 class="animate-element" data-delay="400">Key Aspects:</h3>
+                    <ul class="bullet-list">
+                        <li class="bullet-point">Real-time code suggestions and completion</li>
+                        <li class="bullet-point">Automated testing and debugging assistance</li>
+                        <li class="bullet-point">Documentation generation</li>
+                        <li class="bullet-point">Code review and optimization</li>
+                        <li class="bullet-point">Natural language to code translation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 3: The AI Programming Landscape -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">The AI Programming Landscape</h2>
+                    <p class="slide-subtitle animate-element" data-delay="200">Explore the variety of AI-powered tools transforming modern software development</p>
+                    <ul class="tool-list">
+                        <li class="bullet-point"><strong>GitHub Copilot</strong> - Microsoft's AI pair programmer</li>
+                        <li class="bullet-point"><strong>ChatGPT/GPT-4</strong> - OpenAI's conversational coding assistant</li>
+                        <li class="bullet-point"><strong>Amazon CodeWhisperer</strong> - AWS's code generation service</li>
+                        <li class="bullet-point"><strong>TabNine</strong> - AI code completion platform</li>
+                        <li class="bullet-point"><strong>Replit Ghostwriter</strong> - Cloud-based AI coding assistant</li>
+                        <li class="bullet-point"><strong>Claude (Anthropic)</strong> - Advanced reasoning and code analysis</li>
+                        <li class="bullet-point"><strong>Cursor AI</strong> - AI-powered code editor</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 4: Market Growth and Industry Statistics -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">Market Growth and Industry Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card bullet-point">
+                            <div class="stat-number">$4.91B</div>
+                            <div class="stat-label">2024 Market Size</div>
+                        </div>
+                        <div class="stat-card bullet-point">
+                            <div class="stat-number">$27.17B</div>
+                            <div class="stat-label">2032 Projection</div>
+                        </div>
+                        <div class="stat-card bullet-point">
+                            <div class="stat-number">23.8%</div>
+                            <div class="stat-label">CAGR (2024-2032)</div>
+                        </div>
+                        <div class="stat-card bullet-point">
+                            <div class="stat-number">84%</div>
+                            <div class="stat-label">Developers using or planning to use AI tools (2025)</div>
+                        </div>
+                        <div class="stat-card bullet-point">
+                            <div class="stat-number">51%</div>
+                            <div class="stat-label">Professional developers use AI daily</div>
+                        </div>
+                        <div class="stat-card bullet-point">
+                            <div class="stat-number">25%</div>
+                            <div class="stat-label">Of Google's code is AI-assisted</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: NEW - Market Growth Visualization -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content chart-slide">
+                    <h2 class="animate-element" data-delay="0">AI Code Tools Market Trajectory</h2>
+                    <div class="chart-container animate-element" data-delay="300">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/bc02bff8c702793bb3ab758acf0e10fd/077cb138-eb1f-4dbd-a7cf-3f62bc5d38e7/e6e73eb7.png" alt="AI Code Tools Market Growth Projection (2024-2032)" class="chart-image">
+                    </div>
+                    <ul class="key-takeaways">
+                        <li class="bullet-point">$4.91B market size in 2024</li>
+                        <li class="bullet-point">Projected $27.17B by 2032</li>
+                        <li class="bullet-point">23.8% compound annual growth rate</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 6: Company Adoption Trends -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">Company Adoption Trends</h2>
+                    <div class="adoption-stats">
+                        <div class="key-stat bullet-point">
+                            <span class="stat-highlight">62%</span> currently using, <span class="stat-highlight">14%</span> planning to use
+                        </div>
+                        <ul class="bullet-list">
+                            <li class="bullet-point"><strong>GitHub Copilot:</strong> 1.3 million paid subscribers with 50,000+ organizations</li>
+                            <li class="bullet-point"><strong>Enterprise adoption:</strong> Major companies like Accenture (50,000 developers), Google, Amazon</li>
+                            <li class="bullet-point"><strong>Investment surge:</strong> $906 million invested in AI coding assistants since January 2023</li>
+                            <li class="bullet-point"><strong>Amazon Q Developer:</strong> Saved equivalent of 4,500 developer-years of work ($260M efficiency gains)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: NEW - Developer Adoption Statistics -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content chart-slide">
+                    <h2 class="animate-element" data-delay="0">Current Developer Adoption Landscape</h2>
+                    <div class="chart-container animate-element" data-delay="300">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/bc02bff8c702793bb3ab758acf0e10fd/ca211674-34a7-459f-b85e-d310fe877f53/bed61a00.png" alt="Developer AI Tool Adoption Statistics (2024-2025)" class="chart-image">
+                    </div>
+                    <ul class="key-takeaways">
+                        <li class="bullet-point">84% of developers using or planning to use AI tools</li>
+                        <li class="bullet-point">62% currently active users</li>
+                        <li class="bullet-point">51% use AI coding tools daily</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 8: Deep Dive: GitHub Copilot -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">Deep Dive: GitHub Copilot</h2>
+                    <p class="slide-subtitle animate-element bullet-point">"GitHub Copilot is an AI-powered pair programmer transforming how developers write code"</p>
+                    <h3 class="animate-element" data-delay="400">Key Features:</h3>
+                    <ul class="feature-list">
+                        <li class="bullet-point">Real-time code suggestions and function generation</li>
+                        <li class="bullet-point">Support for 40+ programming languages</li>
+                        <li class="bullet-point">Integration with popular IDEs (VS Code, JetBrains, Vim)</li>
+                        <li class="bullet-point">Chat-based Q&A and natural language queries</li>
+                        <li class="bullet-point">Context-aware suggestions based on existing codebase</li>
+                        <li class="bullet-point">Automated test case generation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 9: GitHub Copilot: Impact Studies -->
+            <div class="slide" data-slide="9">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">GitHub Copilot: Impact Studies</h2>
+                    <div class="impact-grid">
+                        <div class="impact-stat bullet-point">
+                            <div class="impact-number">55%</div>
+                            <div class="impact-label">Faster coding speed</div>
+                        </div>
+                        <div class="impact-stat bullet-point">
+                            <div class="impact-number">90%</div>
+                            <div class="impact-label">Developer satisfaction increase</div>
+                        </div>
+                        <div class="impact-stat bullet-point">
+                            <div class="impact-number">8.7%</div>
+                            <div class="impact-label">Increase in pull requests</div>
+                        </div>
+                        <div class="impact-stat bullet-point">
+                            <div class="impact-number">84%</div>
+                            <div class="impact-label">Increase in successful builds</div>
+                        </div>
+                        <div class="impact-stat bullet-point">
+                            <div class="impact-number">33%</div>
+                            <div class="impact-label">Average acceptance rate for suggestions</div>
+                        </div>
+                        <div class="impact-stat bullet-point">
+                            <div class="impact-number">67%</div>
+                            <div class="impact-label">Use Copilot at least 5 days per week</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 10: NEW - GitHub Copilot Impact Metrics -->
+            <div class="slide" data-slide="10">
+                <div class="slide-content chart-slide">
+                    <h2 class="animate-element" data-delay="0">GitHub Copilot: Measured Impact</h2>
+                    <div class="chart-container animate-element" data-delay="300">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/bc02bff8c702793bb3ab758acf0e10fd/f2264430-e520-4492-b2fe-790dac5f27b3/b7f63c3d.png" alt="GitHub Copilot Impact Study Results" class="chart-image">
+                    </div>
+                    <ul class="key-takeaways">
+                        <li class="bullet-point">55% improvement in coding speed</li>
+                        <li class="bullet-point">90% developer satisfaction rate</li>
+                        <li class="bullet-point">67% use Copilot 5+ days per week</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 11: Benefits of AI Assisted Programming -->
+            <div class="slide" data-slide="11">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">Benefits of AI Assisted Programming</h2>
+                    <ul class="benefits-list">
+                        <li class="bullet-point">Increased productivity and speed (around 20% time savings)</li>
+                        <li class="bullet-point">Faster learning curve for new developers</li>
+                        <li class="bullet-point">Reduced mental effort for repetitive tasks</li>
+                        <li class="bullet-point">Enhanced code quality through automated review</li>
+                        <li class="bullet-point">Improved developer satisfaction and job fulfillment</li>
+                        <li class="bullet-point">Accelerated prototyping and experimentation</li>
+                        <li class="bullet-point">Better documentation generation</li>
+                        <li class="bullet-point">Cross-language code translation capabilities</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 12: Challenges & Considerations -->
+            <div class="slide" data-slide="12">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">Challenges & Considerations</h2>
+                    <ul class="challenges-list">
+                        <li class="bullet-point"><strong>Declining trust:</strong> Trust fell from 43% to 33%</li>
+                        <li class="bullet-point"><strong>Complex task limitations:</strong> 45% believe AI struggles with complex tasks</li>
+                        <li class="bullet-point"><strong>Code quality concerns:</strong> 41% higher churn rate for AI-generated code</li>
+                        <li class="bullet-point"><strong>Debugging overhead:</strong> 45% say debugging AI code takes longer than writing from scratch</li>
+                        <li class="bullet-point"><strong>Security vulnerabilities</strong> in generated code</li>
+                        <li class="bullet-point"><strong>Over-reliance</strong> reducing developer skills</li>
+                        <li class="bullet-point"><strong>Ethical concerns:</strong> bias, copyright, attribution</li>
+                        <li class="bullet-point"><strong>Outdated model</strong> training data limitations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 13: NEW - Trust Decline Visualization -->
+            <div class="slide" data-slide="13">
+                <div class="slide-content chart-slide">
+                    <h2 class="animate-element" data-delay="0">The Trust Challenge: Declining Confidence</h2>
+                    <div class="chart-container animate-element" data-delay="300">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/bc02bff8c702793bb3ab758acf0e10fd/81498798-a7e8-48ce-99f7-fe62689940c0/0463d7a2.png" alt="Declining Trust in AI Coding Tools (2024-2025)" class="chart-image">
+                    </div>
+                    <ul class="key-takeaways">
+                        <li class="bullet-point">Trust in accuracy fell from 43% to 33%</li>
+                        <li class="bullet-point">Overall favorability dropped from 72% to 60%</li>
+                        <li class="bullet-point">Growing skepticism despite adoption</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 14: NEW - Developer Concerns Chart -->
+            <div class="slide" data-slide="14">
+                <div class="slide-content chart-slide">
+                    <h2 class="animate-element" data-delay="0">Primary Developer Concerns</h2>
+                    <div class="chart-container animate-element" data-delay="300">
+                        <img src="https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/bc02bff8c702793bb3ab758acf0e10fd/ccd04ab4-8457-48f8-9103-e98b62227e93/bf25b2dc.png" alt="Developer Concerns About AI Coding Tools" class="chart-image">
+                    </div>
+                    <ul class="key-takeaways">
+                        <li class="bullet-point">45% struggle with complex tasks</li>
+                        <li class="bullet-point">45% find debugging AI code takes longer</li>
+                        <li class="bullet-point">Quality and security remain top concerns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 15: Future Outlook & Implications -->
+            <div class="slide" data-slide="15">
+                <div class="slide-content">
+                    <h2 class="animate-element" data-delay="0">Future Outlook & Implications</h2>
+                    <div class="future-highlight bullet-point">
+                        <strong>Skill evolution:</strong> 80% of software engineers need to upskill by 2027 (Gartner)
+                    </div>
+                    <ul class="future-list">
+                        <li class="bullet-point">Deeper IDE and workflow integration</li>
+                        <li class="bullet-point">Enhanced explainability and transparency</li>
+                        <li class="bullet-point">Multi-agent AI development systems</li>
+                        <li class="bullet-point">Real-time code review and security scanning</li>
+                        <li class="bullet-point">Domain-specific AI coding assistants</li>
+                        <li class="bullet-point">Ethical AI development frameworks</li>
+                        <li class="bullet-point">New developer roles: AI prompt engineers, AI code reviewers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="presentation-footer">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
