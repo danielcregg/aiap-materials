@@ -633,7 +633,7 @@ function setupThemeHandling() {
         // Could trigger re-animation of certain elements if needed
     }
 
-    mediaQuery.addListener(handleThemeChange);
+    mediaQuery.addEventListener('change', handleThemeChange);
     handleThemeChange(mediaQuery);
 }
 
