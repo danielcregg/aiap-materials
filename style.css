@@ -1634,14 +1634,66 @@ select.form-control {
 
 /* Responsive Design Enhanced */
 @media (max-width: 768px) {
+  /* Mobile Layout: Move header to bottom and optimize layout */
+  .presentation-container {
+    flex-direction: column-reverse;
+  }
+
   .presentation-header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
     padding: var(--space-12) var(--space-16);
     flex-direction: column;
     gap: var(--space-12);
+    border-top: 1px solid var(--color-border);
+    border-bottom: none;
+    background: var(--color-surface);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .slides-container {
+    padding-bottom: 120px; /* Space for bottom navigation */
   }
 
   .slide {
     padding: var(--space-16);
+  }
+
+  .slide-counter {
+    order: 2;
+    text-align: center;
+    justify-content: center;
+    font-size: var(--font-size-sm);
+  }
+
+  .navigation-controls {
+    order: 1;
+    width: 100%;
+  }
+
+  .navigation-controls .btn {
+    min-height: 48px; /* Touch-friendly button height */
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+  }
+
+  .presentation-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    margin-bottom: 100px; /* Position above the navigation */
+  }
+
+  .progress-bar {
+    height: 4px;
+    margin: 0 var(--space-16);
+    border-radius: var(--radius-full);
   }
 
   .title-slide h1 {
@@ -1689,13 +1741,33 @@ select.form-control {
 }
 
 @media (max-width: 480px) {
+  .presentation-header {
+    padding: var(--space-8) var(--space-12);
+  }
+
   .navigation-controls {
     flex-direction: column;
     width: 100%;
+    gap: var(--space-8);
   }
 
   .navigation-controls .btn {
     width: 100%;
+    min-height: 52px; /* Larger touch targets for very small screens */
+    padding: var(--space-12) var(--space-16);
+  }
+
+  .slide-counter {
+    font-size: var(--font-size-xs);
+    padding: var(--space-4) 0;
+  }
+
+  .slides-container {
+    padding-bottom: 160px; /* More space for stacked buttons */
+  }
+
+  .presentation-footer {
+    margin-bottom: 140px; /* Adjust for taller navigation area */
   }
 
   .impact-grid {
